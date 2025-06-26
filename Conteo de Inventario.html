@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Control de Inventario</title>
+  <link rel="stylesheet" href="diseño.css">
+</head>
+<body>
+
+  <header>
+    <h1>Inventario Maria Luisa</h1>
+  </header>
+
+  <section class="formulario">
+    <form id="formInventario">
+      <input type="text" id="nombre" placeholder="Producto" required>
+      <input type="text" id="categoria" placeholder="Categoría" required>
+      <input type="number" id="cantidad" placeholder="Cantidad" min="0" required>
+      <input type="date" id="fecha" required>
+      <button type="submit">Agregar</button>
+    </form>
+  </section>
+
+  <section class="tabla">
+    <table>
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Categoría</th>
+          <th>Cantidad</th>
+          <th>Fecha</th>
+        </tr>
+      </thead>
+      <tbody id="tablaBody"></tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>© 2025 Mi Inventario</p>
+  </footer>
+
+  <script src="inv.js></script>
+</body>
+</html>
