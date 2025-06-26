@@ -37,10 +37,15 @@ function agregarFila({ nombre, categoria, cantidad, fecha }, idx) {
     <td>${categoria}</td>
     <td>${cantidad}</td>
     <td>${fecha}</td>
-    <td><button type="button" class="editar">Editar</button></td>
+    <td>
+      <button type="button" class="editar">Editar</button>
+      <button type="button" class="eliminar">Eliminar</button>
+    </td>
   `;
   // Botón editar
   fila.querySelector(".editar").addEventListener("click", () => cargarParaEditar(idx ?? obtenerIndiceFila(fila)));
+  // Botón eliminar
+  fila.querySelector(".eliminar").addEventListener("click", () => eliminarProducto(idx ?? obtenerIndiceFila(fila)));
   tablaBody.appendChild(fila);
 }
 
@@ -72,6 +77,13 @@ function renderTabla() {
   tablaBody.innerHTML = "";
   const inventario = JSON.parse(localStorage.getItem("inventario")) || [];
   inventario.forEach((producto, idx) => agregarFila(producto, idx));
+}
+
+function eliminarProducto(idx) {
+  const inventario = JSON.parse(localStorage.getItem("inventario")) || [];
+  inventario.splice(idx, 1);
+  localStorage.setItem("inventario", JSON.stringify(inventario));
+  renderTabla();
 }
 
 function obtenerIndiceFila(fila) {
