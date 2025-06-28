@@ -16,7 +16,6 @@ main, .formulario, .tabla, .container {
     max-width: 900px;
 }
 
-/* Encabezado */
 header {
     background-color: #2c3e50;
     color: white;
@@ -24,7 +23,6 @@ header {
     text-align: center;
 }
 
-/* Contenedor principal */
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -32,7 +30,6 @@ header {
     padding: 20px;
 }
 
-/* Tarjeta de producto */
 .product-card {
     background-color: white;
     border: 1px solid #ddd;
@@ -64,7 +61,6 @@ header {
     color: #555;
 }
 
-/* Pie de página */
 footer {
     background-color: #2c3e50;
     color: white;
