@@ -1,8 +1,19 @@
 body {
+    background: url('ML.jpg') no-repeat center center fixed;
+    background-size: cover;
     font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
+    background-color: rgba(247, 247, 247, 0.7); /* Fondo blanco semitransparente */
     margin: 0;
     padding: 0;
+}
+
+main, .formulario, .tabla, .container {
+    background: rgba(255,255,255,0.7); /* Fondo semitransparente para el contenido */
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
 }
 
 /* Encabezado */
